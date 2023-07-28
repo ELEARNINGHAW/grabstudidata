@@ -5,8 +5,8 @@ header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate");
 header("Pragma: no-cache");
 header("Cache-Control: post-check=0, pre-check=0", false);
-include ( 'inc/functions.php' ) ;
-include ( 'inc/data.php' ) ;
+#include ( 'inc/functions.php' ) ;
+#include ( 'inc/data.php' ) ;
 
 $db =  new SQLite3('../db/studidata.db' );
 $hit = false;
@@ -58,7 +58,7 @@ if( isset( $_POST[ 'datasave' ] ) )
     </style>
 </head>
 <body>
-
+   <img width="250" height="92" style="margin:30px; float: right;" src="img/logohawtrans.png">
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
@@ -109,7 +109,7 @@ $okem = filter_var($user_email,FILTER_VALIDATE_EMAIL);
     </style>
 </head>
 <body>
-
+ <img width="250" height="92" style="margin:30px; float: right;" src="img/logohawtrans.png">
 <div class="container">
     <div class="row">
         <div class="col-md-4"></div>
@@ -120,11 +120,11 @@ $okem = filter_var($user_email,FILTER_VALIDATE_EMAIL);
                 <form action="index.php" method="POST">
                     <div class="form-group">
                         <label>email-Adresse: <?php if (!$okem) {echo "<span style='color: #bd2130;'>nicht korrekt!</span>"; } ?></label>
-                        <input type="email" name="user_email" class="form-control"  value="<?php if(isset($user_email)) { echo $user_email; } ?>" required>
+                        <input autocomplete="off" type="email" name="user_email" class="form-control"  value="<?php if(isset($user_email)) { echo $user_email; } ?>" required>
                     </div>
                     <div class="form-group">
                         <label>W-Kennung: <?php if (!$okwk) {echo "<span style='color: #bd2130;'>nicht korrekt!</span>"; } ?></label>
-                        <input type="text" name="user_wkennung" class="form-control" value="<?php if(isset($user_wkennung)) { echo $user_wkennung; } ?>" required>
+                        <input autocomplete="off"  type="text" name="user_wkennung" class="form-control" value="<?php if(isset($user_wkennung)) { echo $user_wkennung; } ?>" required>
                     </div>
                     <input type="submit" name="datasave" value="Ja, Daten sind korrekt" class="btn btn-primary" style="float: right;">
                 </form>
@@ -151,7 +151,7 @@ else
   </style>
 </head>
 <body>
-
+    <img width="250" height="92" style="margin:30px; float: right;" src="img/logohawtrans.png">
 <div class="container">
   <div class="row">
     <div class="col-md-4"></div>
@@ -163,13 +163,13 @@ else
         <form action="index.php" method="POST">
           <div class="form-group">
             <label>email-Adresse:</label>
-            <input type="email" name="user_email" class="form-control"  value="<?php if(isset($_COOKIE["user_email"])) { echo $_COOKIE["user_email"]; } ?>" required>
+            <input autocomplete="off" type="email" name="user_email" class="form-control"  value="<?php if(isset($_COOKIE["user_email"])) { echo $_COOKIE["user_email"]; } ?>" required>
           </div>
           <div class="form-group">
             <label>W-Kennung:</label>
-            <input type="text" name="user_wkennung" class="form-control" value="<?php if(isset($_COOKIE["user_wkennung"])) { echo $_COOKIE["user_wkennung"]; } ?>" required>
+            <input autocomplete="off" type="text" name="user_wkennung" class="form-control" value="<?php if(isset($_COOKIE["user_wkennung"])) { echo $_COOKIE["user_wkennung"]; } ?>" required>
           </div>
-          <input type="submit" name="datacheck" value="Test" class="btn btn-primary" style="float: right;">
+          <input   type="submit" name="datacheck" value="Test" class="btn btn-primary" style="float: right;">
         </form>
       </div>
     </div>
