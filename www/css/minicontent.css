@@ -1,0 +1,23 @@
+div.ssline2 div.ssheader_ p {
+    color: #FFFFFF;
+    padding: 50px;
+    cursor: pointer;
+    opacity: 0.8;
+  	font-family: Georgia, serif;
+    font-size: 28px;
+   text-align: center;
+   line-height: normal;
+}
+
+div.ssline2 div.sscontent * {
+  background: #000000;
+  color: #FFFFFF;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  text-align: center;
+  line-height: normal;
+}
+
+.ui-spinner-button {
+  width: 2.6em;
+}

@@ -1,0 +1,149 @@
+body
+{ background: #333; width: 100%; height: 100% ;margin: 0;  overflow: hidden;
+}
+
+.news 
+{ box-shadow: inset 0 -15px 50px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+  width: 100%;
+  height: 55px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0px;
+  -webkit-user-select: none
+} 
+
+.news span 
+{ float: left;
+  color: #fff;
+  padding: 3px;
+  padding-right:10px;
+  position: relative;
+  top: 3px;
+  border-radius: 4px;
+  box-shadow: inset 0 -15px 50px rgba(0,0,0,0.4);
+  font: 36px "Raleway", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  cursor: pointer
+}
+
+.news ul 
+{ float: left;
+  padding-left: 20px;
+  animation: ticker 10s cubic-bezier(1, 0, .5, 0) infinite;
+  -webkit-user-select: none
+}
+
+.news ul li
+{ padding-top:7px;
+padding-left:10px;
+line-height: 38px;
+list-style: none;
+height: 55px;
+}
+
+.news ul li a {
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  
+  text-decoration: none;
+  font: 34px 'Raleway',Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none
+}
+
+.news ul:hover { animation-play-state: paused }
+.news span:hover+ul { animation-play-state: paused }
+
+/* OTHER COLORS */
+.blue { background: #347fd0 }
+.blue span { background: #2c66be }
+.red { background: #d23435 }
+.red span { background: #c22b2c }
+.green { background: #699B67 }
+.green span { background: #547d52 }
+.magenta { background: #b63ace }
+.magenta span { background: #842696 }
+
+.mobg2 { background: #333333;  opacity: 0.4; z-index: 100;
+}
+
+.mo { color: #FFFFFF; padding: 0px; cursor: default; font-family: 'Oxygen';
+  text-outline: 15px 15px #000000;
+  text-shadow: #000 2px 2px 5px;
+  -webkit-font-smoothing: antialiased
+}
+
+.mo a {     color: #FFFFFF;  cursor: pointer;  z-index: 200;
+}
+
+.fotorama .any {
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+	font-family: Georgia, serif;
+	font-size: 95px;
+	text-align: center;
+	height: 100%;
+	box-sizing: border-box;
+	padding-top: 100px;
+	line-height: normal;
+  padding-top: 50px;
+}
+
+.fotorama .inverse {
+	color: #fff;
+	text-shadow: 0 1px 0 #000;
+  background-size: cover;
+}
+
+.tooltip
+{
+  font-size:60px; width:auto; border:solid 5px white; padding:10px;
+}
+
+.ssnew {
+  padding: 15px;
+  margin: 10px;
+}
+
+
+
+.overlay  {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+  overflow:scroll;
+}
+
+#overlaytext{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+#my_idwww
+{
+  background-image: url("http://placekitten.com/500/500"); background-size: cover; background-color: #ccc;height: 10px;background-position: center;background-repeat: no-repeat;
+}
+
+.my_idwww
+{
+  background-image: url("http://placekitten.com/500/500"); background-size: cover; background-color: #ccc;height: 10px;background-position: center;background-repeat: no-repeat;
+}
